@@ -16,11 +16,7 @@ const Container = () => {
       <div>
         <div></div>
         <div>
-          <FormInput
-            handleChange={handleChange}
-            isEmpty={isEmpty}
-            formData={formData}
-          />
+          <FormInput handleChange={handleChange} />
         </div>
       </div>
     </>
