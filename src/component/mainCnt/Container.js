@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './container.css';
 
 import FormInput from '../formComp/FormInput';
+import CardFront from '../cards/CardFront';
 
 const Container = () => {
   const [formData, setFormData] = useState([]);
@@ -14,7 +15,9 @@ const Container = () => {
   return (
     <>
       <div className='main-cnt'>
-        <div className='card-cnt'></div>
+        <div className='card-cnt'>
+          <CardFront formData={formData} />
+        </div>
         <div className='main-form-cnt'>
           <FormInput handleChange={handleChange} formData={formData} />
         </div>

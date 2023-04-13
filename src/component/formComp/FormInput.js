@@ -1,25 +1,36 @@
 import React, { useState } from 'react';
 
 const FormInput = ({ handleChange, formData }) => {
-  const [error, setError] = useState('');
+  const [error, setError] = useState({
+    nameEr: '',
+    cardNumEr: '',
+    monthYearEr: '',
+    cvcEr: '',
+  });
 
   const handleSubmit = (e) => {
     if (!formData.name) {
-      setError('Please enter your name');
+      setError({ ...error, [nameEr]: 'Please enter your name' });
     } else if (!/^[a-zA-Z ]+$/.test(formData.name)) {
-      setError('write proper name');
+      setError({ ...error, [nameEr]: 'wrong format, letters only' });
     } else if (!formData.cardNum) {
-      setError('Please enter your number');
+      setError({ ...error, [cardNumEr]: 'Please enter your number' });
     } else if (!/^[0-9]+$/.test(formData.cardNum)) {
-      setError('wrong format, numbers only');
+      setError({ ...error, [cardNumEr]: 'wrong format, numbers only' });
     } else if (!formData.month && !formData.year) {
-      setError('please give the card expiry date');
+      setError({
+        ...error,
+        [monthYearEr]: 'Please enter your card expairy date',
+      });
     } else if (!/^[0-9]+$/.test(formData.month && formData.year)) {
-      setError('wrong format, numbers only');
+      setError({ ...error, [monthYearEr]: 'wrong format, numbers only' });
     } else if (!formData.cvc) {
-      setError('Please enter your CVC');
+      setError({ ...error, [cvcEr]: 'Please enter your CVC' });
     } else if (!/^[0-9]+$/.test(formData.cvc) && formData.cvc.length != 3) {
-      setError('Please give proper CVC number');
+      setError({
+        ...error,
+        [cvcEr]: 'wrong format , numers only and number should be three digits',
+      });
     } else {
       e.preventDefault();
     }
@@ -37,9 +48,7 @@ const FormInput = ({ handleChange, formData }) => {
             name='name'
             className='name'
           />
-          <div>
-            <p>{error}</p>
-          </div>
+          <div>{error && <p>{error.nameEr}</p>}</div>
           <label>CARD NUMBER</label>
           <input
             onChange={handleChange}
@@ -47,9 +56,7 @@ const FormInput = ({ handleChange, formData }) => {
             name='cardNum'
             className='number'
           />
-          <div>
-            <p>{error}</p>
-          </div>
+          <div>{error && <p>{error.cardNumEr}</p>}</div>
         </div>
         <div>
           <div>
@@ -61,18 +68,14 @@ const FormInput = ({ handleChange, formData }) => {
               name='month'
               className='month'
             />
-            <div>
-              <p>{error}</p>
-            </div>
+            <div>{error && <p>{error.monthYearEr}</p>}</div>
             <input
               onChange={handleChange}
               type='text'
               name='year'
               className='year'
             />
-            <div>
-              <p>{error}</p>
-            </div>
+            <div>{error && <p>{error.monthYearEr}</p>}</div>
           </div>
           <div>
             <label>CVC</label>
@@ -82,9 +85,7 @@ const FormInput = ({ handleChange, formData }) => {
               name='cvc'
               className='cvc'
             />
-            <div>
-              <p>{error}</p>
-            </div>
+            <div>{error && <p>{error.cvcEr}</p>}</div>
           </div>
         </div>
       </form>
