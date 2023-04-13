@@ -4,7 +4,6 @@ import FormInput from '../formComp/FormInput';
 
 const Container = () => {
   const [formData, setFormData] = useState([]);
-  const [isEmpty, setIsEmpty] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,7 +15,7 @@ const Container = () => {
       <div>
         <div></div>
         <div>
-          <FormInput handleChange={handleChange} />
+          <FormInput handleChange={handleChange} formData={formData} />
         </div>
       </div>
     </>
