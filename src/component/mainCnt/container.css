@@ -1,0 +1,11 @@
+.main-cnt {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.card-cnt {
+  width: 380px;
+  height: 200px;
+  border: 1px solid red;
+}

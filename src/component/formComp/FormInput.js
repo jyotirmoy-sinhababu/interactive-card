@@ -27,7 +27,7 @@ const FormInput = ({ handleChange, formData }) => {
 
   return (
     <div className='form-cnt'>
-      <form>
+      <form className='form'>
         <div>
           {' '}
           <label>CARDHOLDER NAME</label>

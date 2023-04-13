@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './container.css';
 
 import FormInput from '../formComp/FormInput';
 
@@ -12,9 +13,9 @@ const Container = () => {
 
   return (
     <>
-      <div>
-        <div></div>
-        <div>
+      <div className='main-cnt'>
+        <div className='card-cnt'></div>
+        <div className='main-form-cnt'>
           <FormInput handleChange={handleChange} formData={formData} />
         </div>
       </div>
