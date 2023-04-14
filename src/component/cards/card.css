@@ -1,25 +1,42 @@
 .front-card-cnt {
   display: flex;
+  flex-direction: column;
   width: 275px;
   height: 160px;
-  border: 1px solid red;
   border-radius: 7px;
+  background-image: linear-gradient(
+    to right,
+    hsl(249, 99%, 64%),
+    hsl(278, 94%, 30%)
+  );
 }
 
 .front-card-empty-cnt {
   display: flex;
+
+  align-items: center;
+  gap: 12px;
 }
 
 .first-empty-cnt {
   border: 1px solid red;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 
 .second-empty-cnt {
   border: 1px solid red;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
+}
+
+.card-back-cnt {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  height: 160px;
+  border-radius: 7px;
+  border: 1px solid red;
 }
