@@ -19,7 +19,14 @@ const CardFront = ({ formData }) => {
         <div>
           {formData && formData.name ? <p>{formData.name}</p> : <p>_______</p>}
 
-          {formData && formData.cvc ? <p>{formData.cvc}</p> : <p>../....</p>}
+          {(formData && formData.month) || formData.year ? (
+            <p>
+              {formData.month}
+              {formData.year}
+            </p>
+          ) : (
+            <p>../....</p>
+          )}
         </div>
       </div>
     </div>
