@@ -4,10 +4,10 @@ import './card.css';
 
 const CardFront = ({ formData }) => {
   return (
-    <div>
-      <div>
-        <div></div>
-        <div></div>
+    <div className='front-card-cnt'>
+      <div className='front-card-empty-cnt'>
+        <div className='first-empty-cnt'></div>
+        <div className='second-empty-cnt'></div>
       </div>
       <div>
         {formData && formData.cardNum ? (
@@ -17,8 +17,9 @@ const CardFront = ({ formData }) => {
         )}
 
         <div>
-          <p>{formData.name}</p>
-          <p>{formData.cvc}</p>
+          {formData && formData.name ? <p>{formData.name}</p> : <p>_______</p>}
+
+          {formData && formData.cvc ? <p>{formData.cvc}</p> : <p>../....</p>}
         </div>
       </div>
     </div>
