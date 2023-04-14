@@ -5,7 +5,11 @@
 }
 
 .card-cnt {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 375px;
   height: 200px;
   border: 1px solid red;
+  overflow: visible;
 }
