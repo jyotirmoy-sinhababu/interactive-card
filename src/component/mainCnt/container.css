@@ -5,11 +5,17 @@
 }
 
 .card-cnt {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   width: 375px;
   height: 200px;
-  border: 1px solid red;
-  overflow: visible;
+  background-color: hsl(279, 71%, 25%);
+}
+
+.main-card-back-cnt {
+  padding-left: 95px;
+  padding-top: 10px;
+}
+
+.main-card-front-cnt {
+  padding-left: 15px;
+  padding-top: 100px;
 }

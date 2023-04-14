@@ -1,19 +1,20 @@
 .front-card-cnt {
   display: flex;
   flex-direction: column;
-  width: 275px;
-  height: 160px;
+  position: absolute;
+  width: 235px;
+  min-height: 130px;
   border-radius: 7px;
   background-image: linear-gradient(
     to right,
     hsl(249, 99%, 64%),
     hsl(278, 94%, 30%)
   );
+  z-index: 3;
 }
 
 .front-card-empty-cnt {
   display: flex;
-
   align-items: center;
   gap: 12px;
 }
@@ -34,19 +35,21 @@
 
 .card-back-cnt {
   display: flex;
+  position: absolute;
   flex-direction: column;
-  width: 275px;
-  height: 160px;
+  width: 235px;
+  min-height: 130px;
   border-radius: 7px;
   background-color: rgb(240, 238, 238);
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+  z-index: 1;
 }
 
 .card-back-empty {
-  width: 275px;
-  height: 50px;
+  width: 235px;
+  height: 25px;
   background-color: black;
 }
 
@@ -55,8 +58,8 @@
   justify-content: flex-end;
   align-items: center;
   padding-right: 12px;
-  width: 200px;
-  height: 40px;
+  width: 180px;
+  height: 30px;
   background-color: rgb(182, 181, 181);
   border-radius: 4px;
 }

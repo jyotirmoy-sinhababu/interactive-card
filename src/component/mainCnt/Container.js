@@ -17,8 +17,12 @@ const Container = () => {
     <>
       <div className='main-cnt'>
         <div className='card-cnt'>
-          <CardBack formData={formData} />
-          <CardFront formData={formData} />
+          <div className='main-card-back-cnt'>
+            <CardBack formData={formData} />
+          </div>
+          <div className='main-card-front-cnt'>
+            <CardFront formData={formData} />
+          </div>
         </div>
         <div className='main-form-cnt'>
           <FormInput handleChange={handleChange} formData={formData} />
