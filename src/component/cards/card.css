@@ -33,6 +33,12 @@
   height: 10px;
 }
 
+.card-font-name-date-cnt {
+  display: flex;
+  gap: 130px;
+  padding-left: 20px;
+}
+
 .card-back-cnt {
   display: flex;
   position: absolute;

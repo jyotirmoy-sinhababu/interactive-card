@@ -9,14 +9,14 @@ const CardFront = ({ formData }) => {
         <div className='first-empty-cnt'></div>
         <div className='second-empty-cnt'></div>
       </div>
-      <div>
+      <div className=''>
         {formData && formData.cardNum ? (
           <p>{formData.cardNum}</p>
         ) : (
           <p>0000 0000 0000 0000</p>
         )}
 
-        <div>
+        <div className='card-font-name-date-cnt'>
           {formData && formData.name ? <p>{formData.name}</p> : <p>_______</p>}
 
           {(formData && formData.month) || formData.year ? (
