@@ -17,8 +17,8 @@ const CardFront = ({ formData }) => {
         )}
 
         <div>
-          <p></p>
-          <p></p>
+          <p>{formData.name}</p>
+          <p>{formData.cvc}</p>
         </div>
       </div>
     </div>

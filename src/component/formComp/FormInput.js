@@ -4,32 +4,36 @@ const FormInput = ({ handleChange, formData }) => {
   const [error, setError] = useState({
     nameEr: '',
     cardNumEr: '',
-    monthYearEr: '',
+    monthEr: '',
+    yearEr: '',
     cvcEr: '',
   });
 
   const handleSubmit = (e) => {
     if (!formData.name) {
-      setError({ ...error, [nameEr]: 'Please enter your name' });
+      setError({ ...error, nameEr: 'Please enter your name' });
     } else if (!/^[a-zA-Z ]+$/.test(formData.name)) {
-      setError({ ...error, [nameEr]: 'wrong format, letters only' });
+      setError({ ...error, nameEr: 'wrong format, letters only' });
     } else if (!formData.cardNum) {
-      setError({ ...error, [cardNumEr]: 'Please enter your number' });
+      setError({ ...error, cardNumEr: 'Please enter your number' });
     } else if (!/^[0-9]+$/.test(formData.cardNum)) {
-      setError({ ...error, [cardNumEr]: 'wrong format, numbers only' });
-    } else if (!formData.month && !formData.year) {
+      setError({ ...error, cardNumEr: 'wrong format, numbers only' });
+    } else if (!formData.month) {
       setError({
         ...error,
-        [monthYearEr]: 'Please enter your card expairy date',
+        monthYearEr: 'Please enter your card expairy month',
       });
-    } else if (!/^[0-9]+$/.test(formData.month && formData.year)) {
-      setError({ ...error, [monthYearEr]: 'wrong format, numbers only' });
+    } else if (
+      !/^[0-9]+$/.test(formData.month) ||
+      !(1 <= parseInt(formData.month, 10) && parseInt(formData.month, 10) <= 12)
+    ) {
+      setError({ ...error, monthEr: 'wrong format, numbers only' });
     } else if (!formData.cvc) {
-      setError({ ...error, [cvcEr]: 'Please enter your CVC' });
+      setError({ ...error, cvcEr: 'Please enter your CVC' });
     } else if (!/^[0-9]+$/.test(formData.cvc) && formData.cvc.length != 3) {
       setError({
         ...error,
-        [cvcEr]: 'wrong format , numers only and number should be three digits',
+        cvcEr: 'wrong format , numbers only and number should be three digits',
       });
     } else {
       e.preventDefault();
