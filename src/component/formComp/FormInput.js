@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './formStyle.css';
+
 const FormInput = ({ handleChange, formData }) => {
   const [error, setError] = useState({
     nameEr: '',
@@ -44,44 +46,51 @@ const FormInput = ({ handleChange, formData }) => {
     <div className='form-cnt'>
       <form className='form'>
         <div>
-          {' '}
-          <label>CARDHOLDER NAME</label>
-          <input
-            onChange={handleChange}
-            type='text'
-            name='name'
-            className='name'
-          />
-          <div>{error && <p>{error.nameEr}</p>}</div>
-          <label>CARD NUMBER</label>
-          <input
-            onChange={handleChange}
-            type='text'
-            name='cardNum'
-            className='number'
-          />
-          <div>{error && <p>{error.cardNumEr}</p>}</div>
+          <div className='small-input-cnt'>
+            <label>CARDHOLDER NAME</label>
+            <input
+              onChange={handleChange}
+              type='text'
+              name='name'
+              className='name'
+            />
+            <div>{error && <p>{error.nameEr}</p>}</div>
+          </div>
+          <div className='small-input-cnt'>
+            {' '}
+            <label>CARD NUMBER</label>
+            <input
+              onChange={handleChange}
+              type='text'
+              name='cardNum'
+              className='number'
+            />
+            <div>{error && <p>{error.cardNumEr}</p>}</div>
+          </div>
         </div>
         <div>
           <div>
-            {' '}
-            <label>EXP.DATE (MM/YY)</label>
-            <input
-              onChange={handleChange}
-              type='text'
-              name='month'
-              className='month'
-            />
-            <div>{error && <p>{error.monthYearEr}</p>}</div>
-            <input
-              onChange={handleChange}
-              type='text'
-              name='year'
-              className='year'
-            />
-            <div>{error && <p>{error.monthYearEr}</p>}</div>
+            <div className='small-input-cnt'>
+              <label>EXP.DATE (MM/YY)</label>
+              <input
+                onChange={handleChange}
+                type='text'
+                name='month'
+                className='month'
+              />
+              <div>{error && <p>{error.monthYearEr}</p>}</div>
+            </div>
+            <div className='small-input-cnt'>
+              <input
+                onChange={handleChange}
+                type='text'
+                name='year'
+                className='year'
+              />
+              <div>{error && <p>{error.monthYearEr}</p>}</div>
+            </div>
           </div>
-          <div>
+          <div className='small-input-cnt'>
             <label>CVC</label>
             <input
               onChange={handleChange}

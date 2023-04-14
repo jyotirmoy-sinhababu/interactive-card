@@ -1,0 +1,4 @@
+.small-input-cnt {
+  display: flex;
+  flex-direction: column;
+}

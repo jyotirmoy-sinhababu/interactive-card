@@ -37,6 +37,7 @@
   display: flex;
   gap: 130px;
   padding-left: 20px;
+  padding-right: 50px;
 }
 
 .card-back-cnt {
@@ -72,4 +73,18 @@
 
 .card-back-cvc {
   color: aliceblue;
+}
+
+.front-card-cardnum-cnt {
+  display: flex;
+  justify-content: center;
+}
+
+.front-card-empty-cnt {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.front-card-dtls-cnt {
+  padding-top: 20px;
 }
