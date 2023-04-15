@@ -68,37 +68,40 @@ const FormInput = ({ handleChange, formData }) => {
             <div>{error && <p>{error.cardNumEr}</p>}</div>
           </div>
         </div>
-        <div>
-          <div className='month-yr-cvc-input-cnt'>
-            <div className='month-yr-input-cnt'>
+
+        <div className='month-yr-cvc-input-cnt'>
+          {' '}
+          <div className='month-yr-input-cnt'>
+            <div>
+              {' '}
               <label>EXP.DATE (MM/YY)</label>
+            </div>
+            <input
+              onChange={handleChange}
+              type='text'
+              name='month'
+              className='month'
+            />
+            <div>{error && <p>{error.monthYearEr}</p>}</div>
+            <div className='year-input-cnt'>
               <input
                 onChange={handleChange}
                 type='text'
-                name='month'
-                className='month'
+                name='year'
+                className='year'
               />
               <div>{error && <p>{error.monthYearEr}</p>}</div>
-              <div className='year-input-cnt'>
-                <input
-                  onChange={handleChange}
-                  type='text'
-                  name='year'
-                  className='year'
-                />
-                <div>{error && <p>{error.monthYearEr}</p>}</div>
-              </div>
-            </div>{' '}
-            <div className='small-input-cnt'>
-              <label>CVC</label>
-              <input
-                onChange={handleChange}
-                type='number'
-                name='cvc'
-                className='cvc'
-              />
-              <div>{error && <p>{error.cvcEr}</p>}</div>
             </div>
+          </div>{' '}
+          <div className='small-input-cnt'>
+            <label>CVC</label>
+            <input
+              onChange={handleChange}
+              type='number'
+              name='cvc'
+              className='cvc'
+            />
+            <div>{error && <p>{error.cvcEr}</p>}</div>
           </div>
         </div>
       </form>
