@@ -69,8 +69,8 @@ const FormInput = ({ handleChange, formData }) => {
           </div>
         </div>
         <div>
-          <div>
-            <div className='small-input-cnt'>
+          <div className='month-yr-cvc-input-cnt'>
+            <div className='month-yr-input-cnt'>
               <label>EXP.DATE (MM/YY)</label>
               <input
                 onChange={handleChange}
@@ -79,26 +79,26 @@ const FormInput = ({ handleChange, formData }) => {
                 className='month'
               />
               <div>{error && <p>{error.monthYearEr}</p>}</div>
-            </div>
+              <div className='year-input-cnt'>
+                <input
+                  onChange={handleChange}
+                  type='text'
+                  name='year'
+                  className='year'
+                />
+                <div>{error && <p>{error.monthYearEr}</p>}</div>
+              </div>
+            </div>{' '}
             <div className='small-input-cnt'>
+              <label>CVC</label>
               <input
                 onChange={handleChange}
-                type='text'
-                name='year'
-                className='year'
+                type='number'
+                name='cvc'
+                className='cvc'
               />
-              <div>{error && <p>{error.monthYearEr}</p>}</div>
+              <div>{error && <p>{error.cvcEr}</p>}</div>
             </div>
-          </div>
-          <div className='small-input-cnt'>
-            <label>CVC</label>
-            <input
-              onChange={handleChange}
-              type='number'
-              name='cvc'
-              className='cvc'
-            />
-            <div>{error && <p>{error.cvcEr}</p>}</div>
           </div>
         </div>
       </form>
