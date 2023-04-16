@@ -6,6 +6,7 @@ import CardFront from '../cards/CardFront';
 import CardBack from '../cards/CardBack';
 
 const Container = () => {
+  const [isTask, setIsTask] = useState(false);
   const [formData, setFormData] = useState([]);
 
   const handleChange = (e) => {

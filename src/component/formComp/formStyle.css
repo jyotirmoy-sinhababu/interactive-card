@@ -29,6 +29,39 @@
   height: 50px;
 }
 
+.small-cvc-cnt {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  width: 60px;
+  height: 160px;
+  bottom: 21px;
+  position: relative;
+}
+
+.month-yr-input-cnt {
+  display: flex;
+  height: 100px;
+}
+
 .month-yr-cvc-input-cnt {
   display: flex;
+  flex-direction: column;
+  padding-left: 35px;
+}
+
+.frm-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.submit-btn {
+  width: 210px;
+  height: 40px;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 0.8rem;
+  background-color: rgb(38, 2, 71);
 }

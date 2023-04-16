@@ -70,12 +70,10 @@ const FormInput = ({ handleChange, formData }) => {
         </div>
 
         <div className='month-yr-cvc-input-cnt'>
-          {' '}
+          <div>
+            <label>EXP.DATE (MM/YY)</label>
+          </div>
           <div className='month-yr-input-cnt'>
-            <div>
-              {' '}
-              <label>EXP.DATE (MM/YY)</label>
-            </div>
             <input
               onChange={handleChange}
               type='text'
@@ -91,22 +89,28 @@ const FormInput = ({ handleChange, formData }) => {
                 className='year'
               />
               <div>{error && <p>{error.monthYearEr}</p>}</div>
+            </div>{' '}
+            <div className='small-cvc-cnt'>
+              <label>CVC</label>
+              <div>
+                {' '}
+                <input
+                  onChange={handleChange}
+                  type='number'
+                  name='cvc'
+                  className='cvc'
+                />
+              </div>
+
+              <div>{error && <p>{error.cvcEr}</p>}</div>
             </div>
           </div>{' '}
-          <div className='small-input-cnt'>
-            <label>CVC</label>
-            <input
-              onChange={handleChange}
-              type='number'
-              name='cvc'
-              className='cvc'
-            />
-            <div>{error && <p>{error.cvcEr}</p>}</div>
-          </div>
         </div>
       </form>
-      <div>
-        <button onClick={handleSubmit}>Confirm</button>
+      <div className='frm-submit-btn'>
+        <button className='submit-btn' onClick={handleSubmit}>
+          Confirm
+        </button>
       </div>
     </div>
   );
