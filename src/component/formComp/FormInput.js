@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './formStyle.css';
 
-const FormInput = ({ handleChange, formData }) => {
+const FormInput = ({ handleChange, formData, setIsTask }) => {
   const [error, setError] = useState({
     nameEr: '',
     cardNumEr: '',
@@ -39,6 +39,7 @@ const FormInput = ({ handleChange, formData }) => {
       });
     } else {
       e.preventDefault();
+      setIsTask(true);
     }
   };
 

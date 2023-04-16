@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './task.css';
+
 const TaskComMsg = () => {
   return (
-    <div>
-      <div>
+    <div className='task-cnt'>
+      <div className='task-svg-cnt'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='36'

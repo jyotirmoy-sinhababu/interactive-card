@@ -4,6 +4,7 @@ import './container.css';
 import FormInput from '../formComp/FormInput';
 import CardFront from '../cards/CardFront';
 import CardBack from '../cards/CardBack';
+import TaskComMsg from '../taskComplete/TaskComMsg';
 
 const Container = () => {
   const [isTask, setIsTask] = useState(false);
@@ -26,7 +27,15 @@ const Container = () => {
           </div>
         </div>
         <div className='main-form-cnt'>
-          <FormInput handleChange={handleChange} formData={formData} />
+          {!isTask ? (
+            <FormInput
+              handleChange={handleChange}
+              formData={formData}
+              setIsTask={setIsTask}
+            />
+          ) : (
+            <TaskComMsg setIsTask={setIsTask} />
+          )}
         </div>
       </div>
     </>

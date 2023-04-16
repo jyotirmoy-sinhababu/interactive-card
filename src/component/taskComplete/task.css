@@ -1,0 +1,17 @@
+.task-cnt {
+  display: flex;
+  gap: 19px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-svg-cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: hsl(279, 91%, 21%);
+}
