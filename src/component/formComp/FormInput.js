@@ -23,7 +23,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
     } else if (!formData.month) {
       setError({
         ...error,
-        monthYearEr: 'Please enter your card expiry month',
+        monthEr: 'Please enter your card expiry month',
       });
     } else if (
       !/^[0-9]+$/.test(formData.month) ||
@@ -38,7 +38,6 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
         cvcEr: 'wrong format , numbers only and number should be three digits',
       });
     } else {
-      debugger;
       e.preventDefault();
       setIsTask(true);
     }

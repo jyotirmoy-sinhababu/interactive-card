@@ -2,7 +2,7 @@ import React from 'react';
 
 import './task.css';
 
-const TaskComMsg = () => {
+const TaskComMsg = ({ setIsTask }) => {
   return (
     <div className='task-cnt'>
       <div className='task-svg-cnt'>
@@ -20,7 +20,9 @@ const TaskComMsg = () => {
       <h2>THANK YOU!</h2>
       <p>We'he added your card details</p>
       <div>
-        <button className='continue-btn'>Continue</button>
+        <button onClick={setIsTask(false)} className='continue-btn'>
+          Continue
+        </button>
       </div>
     </div>
   );

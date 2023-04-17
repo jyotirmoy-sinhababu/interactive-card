@@ -8,7 +8,7 @@ const CardBack = ({ formData }) => {
       <div className='card-back-empty'></div>
       <div className='card-back-cvc-cnt'>
         {formData && formData.cvc ? (
-          <p className='card-back-cvc'>{formData.cvv}</p>
+          <p className='card-back-cvc'>{formData.cvc}</p>
         ) : (
           <p>000</p>
         )}
