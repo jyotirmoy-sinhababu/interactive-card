@@ -19,6 +19,9 @@ const TaskComMsg = () => {
       </div>
       <h2>THANK YOU!</h2>
       <p>We'he added your card details</p>
+      <div>
+        <button className='continue-btn'>Continue</button>
+      </div>
     </div>
   );
 };

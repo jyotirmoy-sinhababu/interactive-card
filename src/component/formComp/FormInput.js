@@ -23,7 +23,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
     } else if (!formData.month) {
       setError({
         ...error,
-        monthYearEr: 'Please enter your card expairy month',
+        monthYearEr: 'Please enter your card expiry month',
       });
     } else if (
       !/^[0-9]+$/.test(formData.month) ||
@@ -38,6 +38,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
         cvcEr: 'wrong format , numbers only and number should be three digits',
       });
     } else {
+      debugger;
       e.preventDefault();
       setIsTask(true);
     }
@@ -81,7 +82,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
               name='month'
               className='month'
             />
-            <div>{error && <p>{error.monthYearEr}</p>}</div>
+            <div>{error && <p>{error.monthEr}</p>}</div>
             <div className='year-input-cnt'>
               <input
                 onChange={handleChange}
@@ -89,7 +90,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
                 name='year'
                 className='year'
               />
-              <div>{error && <p>{error.monthYearEr}</p>}</div>
+              <div>{error && <p>{error.yearEr}</p>}</div>
             </div>{' '}
             <div className='small-cvc-cnt'>
               <label>CVC</label>
