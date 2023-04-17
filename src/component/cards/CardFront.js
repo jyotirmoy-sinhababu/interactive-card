@@ -19,7 +19,11 @@ const CardFront = ({ formData }) => {
         </div>
 
         <div className='card-font-name-date-cnt'>
-          {formData && formData.name ? <p>{formData.name}</p> : <p>_______</p>}
+          {formData && formData.name ? (
+            <p className=''>{formData.name}</p>
+          ) : (
+            <p>_______</p>
+          )}
 
           {(formData && formData.month) || formData.year ? (
             <p>

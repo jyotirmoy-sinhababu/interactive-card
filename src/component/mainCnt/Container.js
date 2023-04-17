@@ -7,7 +7,7 @@ import CardBack from '../cards/CardBack';
 import TaskComMsg from '../taskComplete/TaskComMsg';
 
 const Container = () => {
-  const [isTask, setIsTask] = useState(false);
+  const [isTask, setIsTask] = useState(true);
   const [formData, setFormData] = useState([]);
 
   const handleChange = (e) => {
@@ -27,7 +27,7 @@ const Container = () => {
           </div>
         </div>
         <div className='main-form-cnt'>
-          {!isTask ? (
+          {isTask ? (
             <FormInput
               handleChange={handleChange}
               formData={formData}

@@ -39,7 +39,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
       });
     } else {
       e.preventDefault();
-      setIsTask(true);
+      setIsTask(false);
     }
   };
 

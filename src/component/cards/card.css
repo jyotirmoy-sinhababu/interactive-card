@@ -35,9 +35,10 @@
 
 .card-font-name-date-cnt {
   display: flex;
-  gap: 130px;
+  justify-content: space-between;
   padding-left: 20px;
   padding-right: 50px;
+  width: 200px;
 }
 
 .card-back-cnt {

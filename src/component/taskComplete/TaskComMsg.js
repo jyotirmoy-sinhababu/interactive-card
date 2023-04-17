@@ -20,7 +20,12 @@ const TaskComMsg = ({ setIsTask }) => {
       <h2>THANK YOU!</h2>
       <p>We'he added your card details</p>
       <div>
-        <button onClick={setIsTask(false)} className='continue-btn'>
+        <button
+          onClick={() => {
+            setIsTask(true);
+          }}
+          className='continue-btn'
+        >
           Continue
         </button>
       </div>
