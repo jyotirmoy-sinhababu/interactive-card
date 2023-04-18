@@ -91,3 +91,36 @@
 .front-card-dtls-cnt {
   padding-top: 20px;
 }
+
+@media screen and (min-width: 747px) {
+  .front-card-cnt {
+    display: flex;
+    flex-direction: column;
+    position: initial;
+    width: 100%;
+    max-width: 235px;
+    min-height: 130px;
+    border-radius: 7px;
+    background-image: linear-gradient(
+      to right,
+      hsl(249, 99%, 64%),
+      hsl(278, 94%, 30%)
+    );
+    z-index: 3;
+  }
+
+  .card-back-cnt {
+    display: flex;
+    position: initial;
+    flex-direction: column;
+    max-width: 235px;
+    width: 100%;
+    min-height: 130px;
+    border-radius: 7px;
+    background-color: rgb(240, 238, 238);
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 1;
+  }
+}
