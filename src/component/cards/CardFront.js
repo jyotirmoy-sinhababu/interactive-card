@@ -27,8 +27,7 @@ const CardFront = ({ formData }) => {
 
           {(formData && formData.month) || formData.year ? (
             <p>
-              {formData.month}
-              {formData.year}
+              {formData.month} /{formData.year}
             </p>
           ) : (
             <p>../....</p>

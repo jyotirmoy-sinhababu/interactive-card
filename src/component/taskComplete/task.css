@@ -24,3 +24,13 @@
   font-size: 0.8rem;
   background-color: rgb(38, 2, 71);
 }
+
+.task-header,
+.task-para {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+
+.bi-check2 {
+  color: aliceblue;
+}
