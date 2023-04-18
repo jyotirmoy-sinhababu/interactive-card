@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 235px;
+  width: 100%;
+  max-width: 235px;
   min-height: 130px;
   border-radius: 7px;
   background-image: linear-gradient(
@@ -45,7 +46,8 @@
   display: flex;
   position: absolute;
   flex-direction: column;
-  width: 235px;
+  max-width: 235px;
+  width: 100%;
   min-height: 130px;
   border-radius: 7px;
   background-color: rgb(240, 238, 238);
