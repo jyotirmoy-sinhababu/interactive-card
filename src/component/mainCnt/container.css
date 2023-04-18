@@ -5,7 +5,8 @@
 }
 
 .card-cnt {
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   height: 200px;
   background-color: hsl(279, 71%, 25%);
 }

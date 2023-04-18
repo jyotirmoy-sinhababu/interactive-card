@@ -8,6 +8,7 @@
 .name,
 .number {
   width: 300px;
+  max-width: 100%;
   height: 50px;
   border-radius: 5px;
   font-family: 'Oswald', sans-serif;
@@ -20,6 +21,8 @@
   flex-direction: column;
   gap: 30px;
   height: 335px;
+  width: fit-content;
+  max-width: 100%;
 }
 
 .month-yr-input-cnt {
