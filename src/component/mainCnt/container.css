@@ -63,3 +63,15 @@
     max-width: 750px;
   }
 }
+
+@media screen and (max-width: 1055px) {
+  .main-card-back-cnt {
+    padding-left: 75px;
+    padding-top: 10px;
+  }
+
+  .main-card-front-cnt {
+    padding-left: 25px;
+    padding-top: 100px;
+  }
+}
