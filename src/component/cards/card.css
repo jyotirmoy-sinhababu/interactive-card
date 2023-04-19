@@ -118,7 +118,56 @@
     background-color: rgb(240, 238, 238);
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
     z-index: 1;
+  }
+
+  .card-back-empty {
+    width: 335px;
+    height: 45px;
+    background-color: black;
+  }
+
+  .card-back-cvc-cnt {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 12px;
+    width: 210px;
+    height: 35px;
+    background-color: rgb(182, 181, 181);
+    border-radius: 4px;
+  }
+
+  .first-empty-cnt {
+    background-color: aliceblue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+  .second-empty-cnt {
+    border: 1px solid aliceblue;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+  }
+  .card-font-name-date-cnt {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 50px;
+    width: 300px;
+  }
+
+  .front-card-empty-cnt {
+    padding-left: 30px;
+    padding-top: 15px;
+  }
+
+  .front-card-dtls-cnt {
+    display: flex;
+    padding-top: 20px;
+    flex-direction: column;
+    gap: 40px;
   }
 }

@@ -46,7 +46,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
   return (
     <div className='form-cnt'>
       <form className='form'>
-        <div>
+        <div className='form-name-num-cnt'>
           <div className='small-input-cnt'>
             <label>CARDHOLDER NAME</label>
             <input
@@ -55,7 +55,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
               name='name'
               className='name'
             />
-            <div>{error && <p>{error.nameEr}</p>}</div>
+            <div>{error && <p className='err'>{error.nameEr}</p>}</div>
           </div>
           <div className='small-input-cnt'>
             {' '}
@@ -66,7 +66,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
               name='cardNum'
               className='number'
             />
-            <div>{error && <p>{error.cardNumEr}</p>}</div>
+            <div>{error && <p className='err'>{error.cardNumEr}</p>}</div>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
               name='month'
               className='month'
             />
-            <div>{error && <p>{error.monthEr}</p>}</div>
+            <div>{error && <p className='err'>{error.monthEr}</p>}</div>
             <div className='year-input-cnt'>
               <input
                 onChange={handleChange}
@@ -89,7 +89,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
                 name='year'
                 className='year'
               />
-              <div>{error && <p>{error.yearEr}</p>}</div>
+              <div>{error && <p className='err'>{error.yearEr}</p>}</div>
             </div>{' '}
             <div className='small-cvc-cnt'>
               <label>CVC</label>
@@ -103,7 +103,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
                 />
               </div>
 
-              <div>{error && <p>{error.cvcEr}</p>}</div>
+              <div>{error && <p className='err'>{error.cvcEr}</p>}</div>
             </div>
           </div>{' '}
         </div>
