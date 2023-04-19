@@ -108,7 +108,7 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
           </div>{' '}
         </div>
       </form>
-      <div className='frm-submit-btn'>
+      <div className='frm-submit-btn-cnt'>
         <button className='submit-btn' onClick={handleSubmit}>
           Confirm
         </button>

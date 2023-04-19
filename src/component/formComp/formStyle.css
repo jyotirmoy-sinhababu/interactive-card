@@ -7,7 +7,7 @@
 
 .name,
 .number {
-  max-width: 300px;
+  min-width: 270px;
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -31,9 +31,18 @@
 }
 
 .month,
-.year,
+.year {
+  max-width: 60px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
 .cvc {
-  max-width: 50px;
+  min-width: 97px;
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -71,26 +80,57 @@
 }
 
 .submit-btn {
-  width: 210px;
+  width: 310px;
   height: 40px;
   border-radius: 5px;
   color: aliceblue;
   font-size: 0.8rem;
   background-color: rgb(38, 2, 71);
 }
-
+.frm-submit-btn-cnt {
+  padding-left: 28px;
+}
 @media screen and (min-width: 747px) {
-  .form-cnt {
-  }
-
   .name,
   .number {
-    max-width: 800px;
+    min-width: 340px;
     width: 100%;
-    height: 50px;
+    height: 40px;
     border-radius: 5px;
     font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
     padding-left: 10px;
+  }
+
+  .month,
+  .year {
+    max-width: 65px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    padding-left: 10px;
+  }
+
+  .cvc {
+    min-width: 145px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    padding-left: 10px;
+  }
+  .frm-submit-btn-cnt {
+    padding-left: 28px;
+  }
+  .submit-btn {
+    width: 360px;
+    height: 40px;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: 0.8rem;
+    background-color: rgb(38, 2, 71);
   }
 }
