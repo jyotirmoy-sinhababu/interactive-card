@@ -96,10 +96,9 @@
   .front-card-cnt {
     display: flex;
     flex-direction: column;
-    position: initial;
     width: 100%;
-    max-width: 235px;
-    min-height: 130px;
+    max-width: 335px;
+    min-height: 200px;
     border-radius: 7px;
     background-image: linear-gradient(
       to right,
@@ -111,11 +110,10 @@
 
   .card-back-cnt {
     display: flex;
-    position: initial;
     flex-direction: column;
-    max-width: 235px;
+    max-width: 335px;
     width: 100%;
-    min-height: 130px;
+    min-height: 200px;
     border-radius: 7px;
     background-color: rgb(240, 238, 238);
     justify-content: center;
