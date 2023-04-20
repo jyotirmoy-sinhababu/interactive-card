@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './formStyle.css';
 
@@ -10,6 +10,15 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
     yearEr: '',
     cvcEr: '',
   });
+
+  const [currentYear, setCurrentYear] = useState();
+
+  useEffect(() => {
+    const currentDate = new Date();
+    setCurrentYear(currentDate.getFullYear());
+  }, []);
+
+  console.log(currentYear);
 
   const handleSubmit = (e) => {
     if (!formData.name) {
@@ -36,6 +45,13 @@ const FormInput = ({ handleChange, formData, setIsTask }) => {
       setError({
         ...error,
         cvcEr: 'wrong format , numbers only and number should be three digits',
+      });
+    } else if (!formData.year) {
+      setError({ ...error, yearEr: 'please enter your expiry year' });
+    } else if (formData.year < currentYear) {
+      setError({
+        ...error,
+        yearEr: 'Expiry year can not be less than current year',
       });
     } else {
       e.preventDefault();
